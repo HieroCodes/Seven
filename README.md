@@ -1,16 +1,11 @@
-# leboncoin
+# Leboncoin
 
 A Seven Flutter Test
 
-## Getting Started
+## Exercice :
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Display a list of all the conversations
+Allow the user to select a conversation
+  +Inside the conversation, there is a list of all the messages between these two users.
+  +As a user, you can type and send new messages in this conversation
+<img width="1708" alt="Capture d’écran 2024-07-27 à 16 18 51" src="https://github.com/user-attachments/assets/fd1d7f3a-e120-493e-834a-296fe7552870">
