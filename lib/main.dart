@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:leboncoin/screens/conversation.dart';
 import 'package:leboncoin/screens/dashboard.dart';
 
 void main() {

@@ -27,7 +27,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
     final message = _controller.text;
     if (message.isNotEmpty) {
       try {
-        await MessageService().sendMessage(widget.conversationId, 1, message); // Suppose 1 est l'ID de l'utilisateur actuel
+        await MessageService().sendMessage(widget.conversationId, 1, message);
         _controller.clear();
         setState(() {
           futureMessages = MessageService().fetchMessages(widget.conversationId);
@@ -67,7 +67,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 final message = snapshot.data![index];
-                final bool isCurrentUser = message.authorId == 1; // Suppose 1 est l'ID de l'utilisateur actuel
+                final bool isCurrentUser = message.authorId == 1;
                 final alignment = isCurrentUser ? Alignment.centerRight : Alignment.centerLeft;
                 final color = isCurrentUser ? Colors.blue : Colors.grey.shade200;
                 final textColor = isCurrentUser ? Colors.white : Colors.black;

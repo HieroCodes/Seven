@@ -127,7 +127,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 '13:31',
                                 style: TextStyle(color: Colors.grey, fontSize: 12),
                               ),
-                              if (true) // Remplacer par la condition pour les messages non lus
+                              if (true)
                                 Container(
                                   padding: EdgeInsets.all(6),
                                   decoration: BoxDecoration(
@@ -135,7 +135,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     shape: BoxShape.circle,
                                   ),
                                   child: Text(
-                                    '3', // Remplacer par le nombre de messages non lus
+                                    '3',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 12,
