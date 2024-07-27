@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main>
+      <v-container>
+        <ConversationsList />
+        <ConversationView v-if="selectedConversation" />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { useChatStore } from './store/store';
+import ConversationsList from './components/ConversationsList.vue';
+import ConversationView from './components/ConversationView.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ConversationsList,
+    ConversationView,
+  },
+  computed: {
+    selectedConversation() {
+      const chatStore = useChatStore();
+      return chatStore.selectedConversation;
+    },
+  },
+  mounted() {
+    const chatStore = useChatStore();
+    chatStore.fetchConversations();
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
